@@ -1,5 +1,10 @@
 chat:
   build: .
-  command: echo 'ready'
+  command: npm run dev
+  environment:
+      NODE_ENV: development
+  ports:
+    - '3000:3000'
   volumes:
     - .:/home/app/chat
+    - /home/app/chat/node_modules
